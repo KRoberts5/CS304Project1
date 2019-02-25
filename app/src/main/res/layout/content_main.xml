@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="32dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="32dp" />
+
+    <TextView
+        android:id="@+id/outputView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <Button
+        android:id="@+id/input7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:onClick="retrieveInput"
+        android:text="@string/num_7"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/input4"
+        app:layout_constraintEnd_toStartOf="@+id/input8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/outputView" />
+
+    <Button
+        android:id="@+id/input8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/num_8"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/input5"
+        app:layout_constraintEnd_toStartOf="@+id/input9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/input7"
+        app:layout_constraintTop_toBottomOf="@+id/outputView" />
+
+    <Button
+        android:id="@+id/input9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/num_9"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/input6"
+        app:layout_constraintEnd_toStartOf="@+id/inputSquareRoot"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/input8"
+        app:layout_constraintTop_toBottomOf="@+id/outputView" />
+
+    <Button
+        android:id="@+id/inputSquareRoot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/SquareRoot"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputDivision"
+        app:layout_constraintEnd_toStartOf="@+id/inputClear"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/input9"
+        app:layout_constraintTop_toBottomOf="@+id/outputView"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/inputClear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/clear"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputPercent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/inputSquareRoot"
+        app:layout_constraintTop_toBottomOf="@+id/outputView" />
+
+    <Button
+        android:id="@+id/input4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/num_4"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/input1"
+        app:layout_constraintEnd_toStartOf="@+id/input5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/input7" />
+
+    <Button
+        android:id="@+id/input5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/num_5"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/input2"
+        app:layout_constraintEnd_toStartOf="@+id/input6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/input4"
+        app:layout_constraintTop_toBottomOf="@+id/input8" />
+
+    <Button
+        android:id="@+id/input6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/num_6"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/input3"
+        app:layout_constraintEnd_toStartOf="@+id/inputDivision"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/input5"
+        app:layout_constraintTop_toBottomOf="@+id/input9" />
+
+    <Button
+        android:id="@+id/inputDivision"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/Division"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputMultiplication"
+        app:layout_constraintEnd_toStartOf="@+id/inputPercent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/input6"
+        app:layout_constraintTop_toBottomOf="@+id/inputSquareRoot" />
+
+    <Button
+        android:id="@+id/inputPercent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="12dp"
+        android:onClick="retrieveInput"
+        android:text="@string/percent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputSubtract"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/inputDivision"
+        app:layout_constraintTop_toBottomOf="@+id/inputClear" />
+
+    <Button
+        android:id="@+id/input1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/num_1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputSignChange"
+        app:layout_constraintEnd_toStartOf="@+id/input2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/input4" />
+
+    <Button
+        android:id="@+id/input2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/num_2"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/input0"
+        app:layout_constraintEnd_toStartOf="@+id/input3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/input1"
+        app:layout_constraintTop_toBottomOf="@+id/input5" />
+
+    <Button
+        android:id="@+id/input3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/num_3"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputDecimalPoint"
+        app:layout_constraintEnd_toStartOf="@+id/inputMultiplication"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/input2"
+        app:layout_constraintTop_toBottomOf="@+id/input6" />
+
+    <Button
+        android:id="@+id/inputMultiplication"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/Multiplication"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputAdd"
+        app:layout_constraintEnd_toStartOf="@+id/inputSubtract"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/input3"
+        app:layout_constraintTop_toBottomOf="@+id/inputDivision" />
+
+    <Button
+        android:id="@+id/inputSubtract"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/subtraction"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputEqual"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/inputMultiplication"
+        app:layout_constraintTop_toBottomOf="@+id/inputPercent" />
+
+    <Button
+        android:id="@+id/inputSignChange"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/SignChange"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/input0"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/input1" />
+
+    <Button
+        android:id="@+id/input0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/num_0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/inputDecimalPoint"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/inputSignChange"
+        app:layout_constraintTop_toBottomOf="@+id/input2" />
+
+    <Button
+        android:id="@+id/inputDecimalPoint"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/decimal"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/inputAdd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/input0"
+        app:layout_constraintTop_toBottomOf="@+id/input3" />
+
+    <Button
+        android:id="@+id/inputAdd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/add"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/inputEqual"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/inputDecimalPoint"
+        app:layout_constraintTop_toBottomOf="@+id/inputMultiplication" />
+
+    <Button
+        android:id="@+id/inputEqual"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="retrieveInput"
+        android:text="@string/equal"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/inputAdd"
+        app:layout_constraintTop_toBottomOf="@+id/inputSubtract" />
+
+</android.support.constraint.ConstraintLayout>
